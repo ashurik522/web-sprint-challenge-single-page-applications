@@ -1,6 +1,10 @@
-const Cart = (props) => {
 
-    const { pizza } = props;
+
+function Cart({pizza}) {
+    if(!pizza){
+        return<h3>Add a pizza!</h3>
+    }
+    
 
     return(
         <div className="cart-container">

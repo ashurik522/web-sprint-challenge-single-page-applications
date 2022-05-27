@@ -101,7 +101,7 @@ const validateChange = (name, value) => {
      <main>
        <Switch>
          <Route exact path ="/">
-          <HomePage />
+          <HomePage myState={myState}/>
          </Route>
          <Route exact path ="/pizza">
           <PizzaForm
@@ -113,9 +113,6 @@ const validateChange = (name, value) => {
           />
          </Route>
        </Switch>
-       {myState.map(pizza=> {
-              return <Cart key={pizza.id} pizza={pizza} />
-            })}
      </main>
    </div>
   );
