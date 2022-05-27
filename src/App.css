@@ -36,3 +36,57 @@
     transform: rotate(360deg);
   }
 }
+
+body{
+  font-family: 'Indie Flower', cursive;
+}
+
+nav{
+  display:flex;
+  flex-direction: row;
+  margin: 5%;
+  justify-content: space-between;
+  border: solid 4px black;
+  padding: 0% 5% 0% 5%;
+}
+
+.nav-link{
+  margin-right: 1rem;
+  font-size: 1.3rem;
+}
+
+.title{
+  font-size: 2rem;
+}
+
+.link-container{
+  margin-top: 5%;
+}
+
+.top-image{
+  background-image: url("../Images/homepizza.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 60vh;
+  padding: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.img-link{
+  background-color: rgb(85, 83, 82);
+  border: solid 2px black;
+  border-radius: 5px;
+  padding: 2%;
+  opacity: .8;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.img-link:hover{
+  box-shadow: 0 0 5px 5px;
+}
