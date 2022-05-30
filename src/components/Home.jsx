@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom'
-import Cart from './Cart';
+
 
 const HomePage = (props) => {
 
@@ -10,10 +10,6 @@ const HomePage = (props) => {
             <div className="top-image" >
                 <Link className="img-link" to="/pizza">Get Pizza!</Link>
             </div>
-            {props.myState.map(pizza=> {
-              return <Cart key={pizza.id} pizza={pizza} />
-            })}
-            
         </div>
     )
 }

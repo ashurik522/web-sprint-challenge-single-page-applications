@@ -7,6 +7,7 @@ const Header = (props) => {
             <div className='link-container'>
                 <Link className='nav-link' to="/">Home</Link>
                 <Link className='nav-link' id="order-pizza" to="/pizza">Order</Link>
+                <Link className='nav-link' to="/cart">Cart</Link>
             </div>
 
         </nav>

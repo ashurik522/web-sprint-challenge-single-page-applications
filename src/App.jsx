@@ -11,6 +11,7 @@ import axios from 'axios'
 import {useHistory} from 'react-router-dom'
 
 const initialState = []
+
     
 const initialFormValue = 
     {
@@ -67,8 +68,7 @@ const validateChange = (name, value) => {
   const postNewPizza = newPizza =>{
     axios.post("https://reqres.in/api/orders", newPizza)
       .then(res => {
-          console.log(res.data)
-          setForm(res.data)
+          setMyState([...myState, res.data ])
         })
       .catch(err => console.error(err))
       .finally(()=> setForm(initialFormValue))
@@ -101,7 +101,7 @@ const validateChange = (name, value) => {
      <main>
        <Switch>
          <Route exact path ="/">
-          <HomePage myState={myState}/>
+          <HomePage />
          </Route>
          <Route exact path ="/pizza">
           <PizzaForm
@@ -111,6 +111,15 @@ const validateChange = (name, value) => {
             disabled={disabled}
             errors={errors}
           />
+         </Route>
+         <Route>
+           {
+             myState.map(pizza => {
+               return (
+                 <Cart key={pizza.key} myState={pizza} />
+               )
+             })
+           }
          </Route>
        </Switch>
      </main>

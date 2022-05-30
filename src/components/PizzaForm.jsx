@@ -94,7 +94,7 @@ const PizzaForm = (props) =>{
                         value={values.special}
                         onChange={onChange}/>
                 </label>
-                <button disabled={disabled} className="order-button">Add to Order!</button>
+                <button disabled={disabled} id="order-button">Add to Order!</button>
             </form>
         </div>
     )
