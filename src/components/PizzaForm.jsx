@@ -45,9 +45,9 @@ const PizzaForm = (props) =>{
                         onChange={onChange}
                         >
                         <option value="" >-Select a size-</option>
-                        <option value="small">Small(6 slices)</option>
-                        <option value="medium">Medium(8 slices)</option>
-                        <option value="large">Large(10 slices)</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
                     </select>
                     <div className='error'>{errors.size}</div>
                 </label>

@@ -69,6 +69,8 @@ const validateChange = (name, value) => {
     axios.post("https://reqres.in/api/orders", newPizza)
       .then(res => {
           setMyState([...myState, res.data ])
+          history.push("/cart")
+
         })
       .catch(err => console.error(err))
       .finally(()=> setForm(initialFormValue))
@@ -116,7 +118,7 @@ const validateChange = (name, value) => {
            {
              myState.map(pizza => {
                return (
-                 <Cart key={pizza.key} myState={pizza} />
+                 <Cart key={pizza.id} myState={pizza} />
                )
              })
            }

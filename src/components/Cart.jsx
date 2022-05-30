@@ -8,7 +8,7 @@ function Cart({myState}) {
 
     return(
         <div className="cart-container">
-            <h1>Your order:</h1>
+            <h1>Pizza:</h1>
                 <h3>Who it is for: {myState.name}</h3>
                 <h3>Size: {myState.size}</h3>
                 {
